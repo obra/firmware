@@ -24,28 +24,30 @@
 Keyboard:Doxy
 
 Matrix:
-  /*    0  1  2  3  4  5  6  7  8  9 */
-  Row: 0A 0B 0C 0D 0E 0F 0G 0H 0I 0J /* 0 */
-  Row: 1A 1B 1C 1D 1E 1F 1G 1H 1I 1J /* 1 */
-  Row: 2A 2B 2C 2D 2E 2F 2G 2H 2I 2J /* 2 */
-  Row: 3A 3B 3C 3D 3E 3F 3G 3H 3I 3J /* 3 */
-  Row: 4A 4B 4C 4D 4E 4F 4G 4H 4I 4J /* 4 */
-  Row: 5A 5B 5C 5D 5E 5F 5G 5H 5I 5J /* 5 */
-  Row: 6A 6B 6C 6D 6E 6F 6G 6H 6I 6J /* 6 */
-  Row: 7A 7B 7C 7D 7E 7F 7G 7H 7I 7J /* 7 */
-  Row: 8A 8B 8C 8D 8E 8F 8G 8H 8I 8J /* 8 */
-  Row: 9A 9B 9C 9D 9E 9F 9G 9H 9I 9J /* 9 */
-  Row: 10A 10B 10C 10D 10E 10F 10G 10H 10I 10J /* 10 */
-  Row: 11A 11B 11C 11D 11E 11F 11G 11H 11I 11J /* 11 */
-  Row: 12A 12B 12C 12D 12E 12F 12G 12H 12I 12J /* 12 */
-  Row: 13A 13B 13C 13D 13E 13F 13G 13H 13I 13J /* 13 */
+    /*  F4      F3      F7      F5      F6      D4      D3      D2      D1      D0                  */
+    /*  0       1       2       3       4       5       6       7       8       9                   */
+  Row:  EQUAL   TAB     CAPS    SHIFT   BLQ     --      --      RFUNC   RGRET   RLAYAWAY  /*  0  C7 */
+  Row:  1       Q       A       Z       BLT     --      --      --      --      --        /*  1  C3 */
+  Row:  2       W       S       X       BLW     --      --      --      --      --        /*  2  C4 */
+  Row:  3       E       D       C       PGD     --      --      --      --      --        /*  3  C6 */
+  Row:  4       R       F       V       LPGUP   --      --      --      --      --        /*  4  C5 */
+  Row:  5       T       G       B       LTHMB1  --      --      --      --      --        /*  5  C1 */
+  Row:  HOME    LINDX1  LINDX2  QTY     LTHMB2  --      --      --      --      --        /*  6  C0 */
+  Row:  --      --      LORDER  LGRN2   LFUNC   --      --      --      --      --        /*  6  C2 */
+  Row:  --      --      --      --      --      RIND1   RIND2   RIND3   RVOID   RTHMB2    /*  7  B1 */
+  Row:  --      --      --      --      --      6       Y       H       N       RTHMB1    /*  8  B2 */
+  Row:  --      --      --      --      --      7       U       J       M       LARROW    /*  9  B4 */
+  Row:  --      --      --      --      --      8       I       K       COMMA   DARROW    /*  10 B3 */
+  Row:  --      --      --      --      --      9       O       L       PERIOD  UARROW    /*  11 B5 */
+  Row:  --      --      --      --      --      0       P       SEMI    SLASH   RARROW    /*  12 B7 */
+  Row:  --      --      --      --      --      MINUS   BSLASH  APOSTRO RSHIFT  INS       /* 13  B0 */
 
   /*       0   1   2   3   4   5   6   7   8   9*/
   ColPins:PF4 PF3 PF7 PF5 PF6 PD4 PD3 PD2 PD1 PD0
 
 
-  /*       0   1   2   3   4   5   6   7   8   9   10  11  12  13 */
-  RowPins:PC7 PC3 PC4 PC6 PC5 PC1 PC0 PB1 PB2 PB4 PB3 PB5 PB7 PB0
+  /*       0   1   2   3   4   5   6   7   8   9   10  11  12  13  14 */
+  RowPins:PC7 PC3 PC4 PC6 PC5 PC1 PC0 PC2 PB1 PB2 PB4 PB3 PB5 PB7 PB0
 
 
 
