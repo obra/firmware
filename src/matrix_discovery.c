@@ -84,7 +84,7 @@ activate_row(int row)
 
   DDR(port)  |=  port->bitmask;  // 1 = pin as output
   PORT(port) &= ~port->bitmask;  // 0 = drive pin low
-  _delay_us(20);
+  _delay_us(10);
 }
 
 bool
@@ -104,7 +104,7 @@ MatrixDiscovery__scan_matrix()
   if (!stdout_is_empty())
     return;
 
-  enum {MAX_VERTICES=20};
+  enum {MAX_VERTICES=1500};
   static struct
   {
     int row, col;
@@ -141,7 +141,7 @@ MatrixDiscovery__get_report(USB_KeyboardReport_Data_t *report)
 {
   if (!self.welcome_sent)
   {
-    _delay_ms(10000);
+    _delay_ms(1000);
     printf("The HumbleHacker Keyboard firmware\n");
     printf("------ Matrix Discovery Mode -----\n\n");
     printf("Press any key to find out which PORT/PIN it is connected to.\n");
