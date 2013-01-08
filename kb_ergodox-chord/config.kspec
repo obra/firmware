@@ -77,10 +77,15 @@ KeyMap:Common
   Key:1P Map:Keyboard_Pause                             tl:"Pause"
 */
 
-  Key:BKSP Map:Return_or_Enter                                  tl:"Enter"
-  Key:DELETE Map:Left_Shift                             tl:"Shift"
-  Key:ENTER Map:Right_Shift                            tl:"Shift"
+  Key:BKSP Map:Backspace                                  tl:"Backspace"
+  Key:LFUNC Map:Left_Shift                             tl:"Shift"
+  Key:PGDN Map:Right_Shift                            tl:"Shift"
   Key:SPACE Map:Spacebar                               tl:"Space"
+
+  Key:ENTER Mode:Fn2 type:momentary
+  Key:DELETE Mode:Fn2 type:momentary
+
+
 
   Key:LCTRL Map:Left_Control                               tl:"Ctrl"
   Key:LORDER Map:Left_Alt                                   tl:"Alt"
@@ -135,13 +140,10 @@ KeyMap:US base:Common default
   Key:PERIOD Map:._and_\>                                   tl:">"    bl:"."
   Key:SLASH Map:/_and_?                                    tl:"?"    bl:"/"
   Key:BSLASH Map:\\_and_\|                                  tl:"|"    bl:"\\"
-  Key:PGDN Mode:Fn2 type:momentary
-  Key:LFUNC Mode:Fn2 type:momentary
 
 KeyMap:Fn2 base:Common
-  Key:Q Map:`_and_~  <shift>               tl:"~"
-  Key:Z Map:`_and_~                        tl:"`"
-  Key:W Map:
+  Key:Q Map:`_and_~                        tl:"`"
+  Key:Z Map:`_and_~  <shift>               tl:"~"
 
   Key:W Map:UpArrow                                    tl:"{up}"
   Key:A Map:LeftArrow                                  tl:"{left}"
@@ -149,19 +151,20 @@ KeyMap:Fn2 base:Common
   Key:D Map:RightArrow                                 tl:"{right}"
 
   
-  Key:T Map:PageDown                                   tl:"Pg Dn"
-  Key:G Map:PageUp                                     tl:"Pg Up" 
-  Key:F Map:ESCAPE                                     tl:"esc" 
+  Key:R Map:PageDown                                   tl:"Pg Dn"
+  Key:F Map:PageUp                                     tl:"Pg Up" 
+  /*Key:G Map:ESCAPE                                     tl:"esc"  */
 
   Key:E Map:Home                                       tl:"Home" 
-  Key:R Map:End                                        tl:"End"
+  Key:C Map:End                                        tl:"End"
+  Key:T Map:Tab                                        tl:"Tab"
 
   Key:B Map:-_and_Underscore <shift>                   tl:"__"  
   Key:V Map:Insert                                     tl:"Insert"
-  Key:C Map:Delete_Forward                             tl:"Delete"
+  Key:X Map:Delete_Forward                             tl:"Delete"
 
-  Key:BKSP Map:Tab                                  tl:"Tab"
-  Key:SPACE Map:Backspace                           tl:"Backspace"
+  Key:BKSP Map:ESCAPE                                  tl:"Escape"
+  Key:SPACE Map:Return_or_Enter                           tl:"Return"
 
 
   Key:Y  Map:[_and_{ <shift>                              tl:"{"
