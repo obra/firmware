@@ -1,0 +1,315 @@
+/*
+                    The HumbleHacker Keyboard Project
+                 Copyright © 2008-2010, David Whetstone
+               david DOT whetstone AT humblehacker DOT com
+
+  This file is a part of The HumbleHacker Keyboard Project.
+
+  The HumbleHacker Keyboard Project is free software: you can redistribute
+  it and/or modify it under the terms of the GNU General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
+
+  The HumbleHacker Keyboard Project is distributed in the hope that it will
+  be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
+  Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with The HumbleHacker Keyboard Project.  If not, see
+  <http://www.gnu.org/licenses/>.
+
+*/
+
+Keyboard:Doxy
+
+Matrix:
+    /*  0       1       2       3       4       5       6       7       8       9      10       11     12      13      14   */
+
+ Row:   ESC      1       2       3       4       5       SKIP   SKIP    6       7      8        9      0       EQUAL   DELETE
+ Row:   2A       Q       W       E       R       T       SKIP   SKIP    Y       U      I        O      P       DELETE
+ Row:   ESC      A       S       D       F       G       SKIP   SKIP    H       J      K        L      SEMI    RETURN
+ Row:   L_SHIFT  Z       X       C       V       B       SKIP   SKIP    N       M      COMMA    PERIOD SLASH   R_SHIFT
+ Row:   5A      5B      5C      5D      5E       BKSP    SPACE  5H      5I      5J     5K       5L      5M
+
+
+  /*       0   1   2   3   4   5   6   7   8   9   10  11  12  13 */
+  ColPins: PD2 PE7 PE6 PF0 PF1 PC2 PE1 PC0 PC3 PC4 PC1 PC5 PC6 PC7
+  /*       0   1   2   3   4   */
+  RowPins: PB7 PB2 PB3 PB4 PB5
+
+
+
+
+/*  LED:num_lock    pin:PD2 flow:sink
+    LED:caps_lock   pin:PF1 flow:sink
+    LED:scroll_lock pin:PF2 flow:sink
+    LED:dv          pin:PF3 flow:sink
+*/
+  BlockGhostKeys:no
+
+KeyMap:Common
+
+  
+
+
+  Key:BKSP Map:Backspace                                  tl:"Backspace"
+  Key:L_SHIFT Map:Left_Shift                             tl:"Shift"
+  Key:R_SHIFT Map:Right_Shift                            tl:"Shift"
+  Key:SPACE Map:Spacebar                               tl:"Space"
+
+  /* Key:ENTER Mode:Fn2 type:momentary */
+  Key:L_BLUE Mode:Fn2 type:momentary
+  Key:R_BLUE Mode:Fn2 type:momentary
+
+
+
+  Key:L_CTRL Map:Left_Control                               tl:"Ctrl"
+  Key:L_ALT Map:Left_Alt                                   tl:"Alt"
+  Key:L_CMD Map:Left_GUI                                   tl:"{win}"
+  Key:R_ALT Map:Right_Alt                                  tl:"Alt"
+  Key:R_CMD Map:Right_GUI                                  tl:"{win}"
+  Key:R_CTRL Map:Right_Control                              tl:"Ctrl"
+
+
+KeyMap:US base:Common default
+
+  Key:1 Map:1_and_!                                    tl:"!"    bl:"1"
+  Key:2 Map:2_and_@                                    tl:"@"    bl:"2"
+  Key:3 Map:3_and_#                                    tl:"#"    bl:"3"
+  Key:4 Map:4_and_$                                    tl:"$"    bl:"4"
+  Key:5 Map:5_and_%                                    tl:"%"    bl:"5"
+  Key:6 Map:6_and_^                                    tl:"^"    bl:"6"
+  Key:7 Map:7_and_&                                    tl:"&"    bl:"7"
+  Key:8 Map:8_and_*                                    tl:"*"    bl:"8"
+  Key:9 Map:9_and_(                                    tl:"("    bl:"9"
+  Key:0 Map:0_and_)                                    tl:")"    bl:"0"
+
+  Key:Q Map:q_and_Q                                    tl:"Q"
+  Key:W Map:w_and_W                                    tl:"W"
+  Key:E Map:e_and_E                                    tl:"E"
+  Key:R Map:r_and_R                                    tl:"R"
+  Key:T Map:t_and_T                                    tl:"T"
+  Key:Y Map:y_and_Y                                    tl:"Y"
+  Key:U Map:u_and_U                                    tl:"U"
+  Key:I Map:i_and_I                                    tl:"I"
+  Key:O Map:o_and_O                                    tl:"O"
+  Key:P Map:p_and_P                                    tl:"P"
+
+  Key:A Map:a_and_A                                    tl:"A"
+  Key:S Map:s_and_S                                    tl:"S"
+  Key:D Map:d_and_D                                    tl:"D"
+  Key:F Map:f_and_F                                    tl:"F"
+  Key:G Map:g_and_G                                    tl:"G"
+  Key:H Map:h_and_H                                    tl:"H"
+  Key:J Map:j_and_J                                    tl:"J"
+  Key:K Map:k_and_K                                    tl:"K"
+  Key:L Map:l_and_L                                    tl:"L"
+  Key:SEMI Map:;_and_\:                                   tl:":"    bl:";"
+
+  Key:Z Map:z_and_Z                                    tl:"Z"
+  Key:X Map:x_and_X                                    tl:"X"
+  Key:C Map:c_and_C                                    tl:"C"
+  Key:V Map:v_and_V                                    tl:"V"
+  Key:B Map:b_and_B                                    tl:"B"
+  Key:N Map:n_and_N                                    tl:"N"
+  Key:M Map:m_and_M                                    tl:"M"
+  Key:COMMA Map:,_and_\<                                   tl:"<"    bl:","
+  Key:PERIOD Map:._and_\>                                   tl:">"    bl:"."
+  Key:SLASH Map:/_and_?                                    tl:"?"    bl:"/"
+  Key:BSLASH Map:\\_and_\|                                  tl:"|"    bl:"\\"
+  Key:ENTER Mode:Fn2 type:momentary 
+  /* Key:MINUS  <right_alt|shift>  Mode:Colemak  type:toggle tl:"Colemak"*/
+  Key:L_MINUS Map:Tab                                   tl:"Tab"
+  Key:R_MINUS Map:Return_or_Enter                       tl:"Return"
+KeyMap:Colemak base:Common
+  Key:MINUS <right_alt|shift> Mode:US type:toggle tl:"QWERTY"
+  Key:ENTER Mode:Fn2 type:momentary 
+
+  Key:1 Map:1_and_!                                    tl:"!"    bl:"1"
+  Key:2 Map:2_and_@                                    tl:"@"    bl:"2"
+  Key:3 Map:3_and_#                                    tl:"#"    bl:"3"
+  Key:4 Map:4_and_$                                    tl:"$"    bl:"4"
+  Key:5 Map:5_and_%                                    tl:"%"    bl:"5"
+  Key:6 Map:6_and_^                                    tl:"^"    bl:"6"
+  Key:7 Map:7_and_&                                    tl:"&"    bl:"7"
+  Key:8 Map:8_and_*                                    tl:"*"    bl:"8"
+  Key:9 Map:9_and_(                                    tl:"("    bl:"9"
+  Key:0 Map:0_and_)                                    tl:")"    bl:"0"
+
+  Key:Q Map:q_and_Q                                    tl:"Q"
+  Key:W Map:w_and_W                                    tl:"W"
+  Key:E Map:f_and_F                                    tl:"F"
+  Key:R Map:p_and_P                                    tl:"P"
+  Key:T Map:g_and_G                                    tl:"G"
+  Key:Y Map:j_and_J                                    tl:"J"
+  Key:U Map:l_and_L                                    tl:"L"
+  Key:I Map:u_and_U                                    tl:"U"
+  Key:O Map:y_and_Y                                    tl:"Y"
+  Key:P Map:;_and_\:                                   tl:":"    bl:";"
+
+  Key:A Map:a_and_A                                    tl:"A"
+  Key:S Map:r_and_R                                    tl:"R"
+  Key:D Map:s_and_S                                    tl:"S"
+  Key:F Map:t_and_T                                    tl:"T"
+  Key:G Map:d_and_D                                    tl:"D"
+  Key:H Map:h_and_H                                    tl:"H"
+  Key:J Map:n_and_N                                    tl:"N"
+  Key:K Map:e_and_E                                    tl:"E"
+  Key:L Map:i_and_I                                    tl:"I"
+  Key:SEMI Map:o_and_O                                    tl:"O"
+
+  Key:Z Map:z_and_Z                                    tl:"Z"
+  Key:X Map:x_and_X                                    tl:"X"
+  Key:C Map:c_and_C                                    tl:"C"
+  Key:V Map:v_and_V                                    tl:"V"
+  Key:B Map:b_and_B                                    tl:"B"
+  Key:N Map:k_and_K                                    tl:"K"
+  Key:M Map:m_and_M                                    tl:"M"
+  Key:COMMA Map:,_and_\<                                   tl:"<"    bl:","
+  Key:PERIOD Map:._and_\>                                   tl:">"    bl:"."
+  Key:SLASH Map:/_and_?                                    tl:"?"    bl:"/"
+
+KeyMap:Fn2 base:Common
+  Key:Q Map:`_and_~                        tl:"`"
+  Key:Z Map:`_and_~  <shift>               tl:"~"
+
+  Key:W Map:UpArrow                                    tl:"{up}"
+  Key:A Map:LeftArrow                                  tl:"{left}"
+  Key:S Map:DownArrow                                  tl:"{down}"
+  Key:D Map:RightArrow                                 tl:"{right}"
+
+  
+  Key:R Map:PageDown                                   tl:"Pg Dn"
+  Key:F Map:PageUp                                     tl:"Pg Up" 
+  /*Key:G Map:ESCAPE                                     tl:"esc"  */
+
+  Key:E Map:Home                                       tl:"Home" 
+  Key:C Map:End                                        tl:"End"
+  Key:T Map:Tab                                        tl:"Tab"
+
+  Key:B Map:-_and_Underscore <shift>                   tl:"__"  
+  Key:V Map:Insert                                     tl:"Insert"
+  Key:X Map:Delete_Forward                             tl:"Delete"
+
+  Key:BKSP Map:ESCAPE                                  tl:"Escape"
+  Key:SPACE Map:Return_or_Enter                           tl:"Return"
+
+
+  Key:Y  Map:[_and_{ <shift>                              tl:"{"
+  Key:U  Map:]_and_} <shift>                                tl:"}"
+  Key:I Map:[_and_{                                tl:"["
+  Key:O  Map:]_and_}                                tl:"]"
+  Key:P  Map:squote_and_dquote <shift>                               tl:"\""
+  Key:H Map:LeftArrow                                  tl:"{left}"
+  Key:J Map:DownArrow                                  tl:"{down}"
+  Key:K Map:UpArrow                                    tl:"{up}"
+  Key:L Map:RightArrow                                 tl:"{right}"
+  Key:SEMI  Map: squote_and_dquote                               tl:"\'"
+  Key:N  Map:\\_and_\| <shift>                                tl:"\|"
+  Key:M  Map:=_and_+                                 tl:"="
+  Key:COMMA Map:-_and_Underscore                                tl:"-"
+  Key:EQUAL  Map:=_and_+  <shift>                                tl:"+"
+  Key:SLASH  Map:\\_and_\|                               tl:"\\"
+
+
+
+KeyMap:Fn base:Nm
+
+  Key:A Macro:
+      Map:h_and_H <shift>
+      Map:u_and_U
+      Map:m_and_M
+      Map:b_and_B
+      Map:l_and_L
+      Map:e_and_E
+      Map:h_and_H <shift>
+      Map:a_and_A
+      Map:c_and_C
+      Map:k_and_K
+      Map:e_and_E
+      Map:d_and_D
+      Map:1_and_! <shift>
+      Map:Return_or_Enter
+  Key:1B Mode:US             type:toggle              tl:"US"
+  Key:LFING Mode:Fn  type:toggle              tl:"Function"
+
+  Key:5B Map:NonUS_\\_and_\|                          tl:"<"
+  Key:5C Map:NonUS_\\_and_\| <shift>                  tl:">"
+  Key:5D Map:NonUS_\\_and_\| <right_alt>              tl:"Â¦"
+  Key:5E Map:NonUS_\\_and_\| <right_alt|shift>        tl:"_"
+
+
+KeyMap:Nm
+
+  Key:1O Mode:Nm led:Num type:toggle                    tl:"Num"
+
+  Key:3K Map:Tab                                        tl:"Tab"
+  Key:3L Map:Keypad_/                                   tl:""
+  Key:3M Map:Keypad_*                                   tl:"*"
+  Key:3N Map:Keypad_-                                   tl:"-"
+  Key:3O Map:Tab<shift>                                 tl:"b.tab"
+
+  Key:4H Map:Home                                       tl:"Home"
+  Key:4I Map:UpArrow                                    tl:"{up}"
+  Key:4J Map:End                                        tl:"End"
+  Key:4K Map:Keypad_7_and_Home                          tl:"7"
+  Key:4L Map:Keypad_8_and_Up_Arrow                      tl:"8"
+  Key:4M Map:Keypad_9_and_PageUp                        tl:"9"
+  Key:4N Map:Keypad_+                                   tl:"+"
+
+  Key:5H Map:LeftArrow                                  tl:"{left}"
+  Key:5I Map:DownArrow                                  tl:"{down}"
+  Key:5J Map:RightArrow                                 tl:"{right}"
+  Key:5K Map:Keypad_4_and_Left_Arrow                    tl:"4"
+  Key:5L Map:Keypad_5                                   tl:"5"
+  Key:5M Map:Keypad_6_and_Right_Arrow                   tl:"6"
+  Key:5O Map:Keypad_Clear_Entry                         tl:"clear"
+
+  Key:6K Map:Keypad_1_and_End                           tl:"1"
+  Key:6L Map:Keypad_2_and_Down_Arrow                    tl:"2"
+  Key:6M Map:Keypad_3_and_PageDn                        tl:"3"
+  Key:6N Map:Keypad_ENTER                               tl:"enter"
+  Key:6O Map:Backspace                                  tl:"b.space"
+
+  Key:7K Map:Keypad_0_and_Insert                        tl:"0"
+  Key:7L Macro:                                         tl:"00"
+    Map:Keypad_0_and_Insert
+    Map:Keypad_0_and_Insert
+  Key:7M Map:Keypad_._and_Delete                        tl:"."
+
+KeyMap:pDV base:DV
+
+  Key:2A         Map:4_and_$  <shift>                           bl:"$"
+    |    <shift> Map:`_and_~  <shift>                   tl:"~"
+  Key:2B         Map:7_and_&  <shift>                           bl:"&"
+    |    <shift> Map:5_and_%  <shift>                   tl:"%"
+  Key:2C         Map:[_and_{                                    bl:"["
+    |    <shift> Map:7_and_&                            tl:"7"
+  Key:2D         Map:[_and_{  <shift>                           bl:"{"
+    |    <shift> Map:5_and_%                            tl:"5"
+  Key:2E         Map:]_and_}  <shift>                           bl:"}"
+    |    <shift> Map:3_and_#                            tl:"3"
+  Key:2F         Map:9_and_(  <shift>                           bl:"("
+    |    <shift> Map:1_and_!                            tl:"1"
+  Key:2G         Map:=_and_+                                    bl:"="
+    |    <shift> Map:9_and_(                            tl:"9"
+  Key:2H         Map:8_and_*  <shift>                           bl:"*"
+    |    <shift> Map:0_and_)                            tl:"0"
+  Key:2I         Map:0_and_)  <shift>                           bl:")"
+    |    <shift> Map:2_and_@                            tl:"2"
+  Key:2J         Map:=_and_+  <shift>                           bl:"+"
+    |    <shift> Map:4_and_$                            tl:"4"
+  Key:2K         Map:]_and_}                                    bl:"]"
+    |    <shift> Map:6_and_^                            tl:"6"
+  Key:2L         Map:1_and_!  <shift>                           bl:"!"
+    |    <shift> Map:8_and_*                            tl:"8"
+  Key:2M         Map:3_and_#  <shift>                           bl:"#"
+    |    <shift> Map:`_and_~                            tl:"'"
+
+//Key:XX Mode:Nm led:Num type:toggle                    tl:"Num"
+//Key:XX Map:AL_Calculator page:Consumer_Control        tl:"{calc}"
+//Key:XX Map:AL_Email_Reader page:Consumer_Control      tl:"{mail}"
+//Key:XX Map:AC_Home page:Consumer_Control              tl:"{web}"
+//Key:XX Map:Play/Pause page:Consumer_Control           tl:"Play"
+
