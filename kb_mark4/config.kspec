@@ -24,19 +24,21 @@
 Keyboard:Doxy
 
 Matrix:
-    /*  0       1       2       3       4       5       6       7       8       9      10       11     12      13      14   */
+    /*  0       1       2       3       4       5       6       7        8       9      10       11     */
 
- Row:   ESCAPE   1       2       3       4       5       SKIP   SKIP    6       7      8        9      0       EQUAL   BKSP
- Row:   TAB      Q       W       E       R       T       L_CMD   SKIP    Y       U      I        O      P       DELETE
- Row:   ESCAPE   A       S       D       F       G       L_CTRL  SKIP    H       J      K        L      SEMI    RETURN
- Row:   L_SHIFT  Z       X       C       V       B       L_BLUE  R_BLUE    N       M      COMMA    PERIOD SLASH   R_SHIFT
- Row:   L_CMD      5B      5C       L_CMD   BKSP    ESCAPE  SKIP   SKIP        RETURN SPACE  5H      R_CMD        5K       5L      R_CMD
+ Row:   1       2       3       4       5       SKIP    SKIP    6        7      8        9      0       
+ Row:   Q       W       E       R       T       SKIP    SKIP    Y        U      I        O      P     
+ Row:   A       S       D       F       G       TAB     SKIP    H        J      K        L      SEMI
+ Row:   Z       X       C       V       B       ESCAPE  RETURN  N        M      COMMA    PERIOD SLASH  
+ Row:   SKIP    L_ALT   L_SHIFT  BKSP    L_CTRL SKIP    SKIP    R_CTRL   SPACE  R_SHIFT  R_ALT  SKIP
+ Row:   SKIP    SKIP    L_BLUE   SKIP    L_CMD  SKIP    SKIP    R_CMD    SKIP   R_BLUE   SKIP    SKIP
+
+  /*       0   1   2   3   4   5   6   7   8   9   10  11  */
+  ColPins: PD0 PD1 PD2 PD3 PD4 PD5 PB0 PB1 PB2 PB3 PB4 PB5
 
 
-  /*       0   1   2   3   4   5   6   7   8   9   10  11  12  13 */
-  ColPins: PD2 PE7 PE6 PF0 PF1 PC2 PE1 PC0 PC3 PC4 PC1 PC5 PC6 PC7
-  /*       0   1   2   3   4   */
-  RowPins: PB7 PB2 PB3 PB4 PB1
+/*       0   1   2   3   4   5 */
+  RowPins: PC2 PC3 PC4 PC5 PC6 PC1
 
 
 
@@ -67,8 +69,7 @@ KeyMap:Common
 
 
   Key:L_CTRL Map:Left_Control                               tl:"Ctrl"
-  Key:L_ALT Map:Left_Alt                                   tl:"Alt"
-  Key:L_CMD Map:Left_GUI                                   tl:"{win}"
+  Key:L_ALT Map:Left_Alt                                   tl:"Alt" Key:L_CMD Map:Left_GUI                                   tl:"{win}"
   Key:R_ALT Map:Right_Alt                                  tl:"Alt"
   Key:R_CMD Map:Right_GUI                                  tl:"{win}"
   Key:R_CTRL Map:Right_Control                              tl:"Ctrl"
@@ -170,6 +171,8 @@ KeyMap:Colemak base:Common
   Key:SLASH Map:/_and_?                                    tl:"?"    bl:"/"
 
 KeyMap:Fn2 base:Common
+  Key:Q Map:`_and_~                        tl:"`"
+  Key:Z Map:`_and_~  <shift>               tl:"~"
   Key:W Map:UpArrow                                    tl:"{up}"
   Key:A Map:LeftArrow                                  tl:"{left}"
   Key:S Map:DownArrow                                  tl:"{down}"
@@ -190,8 +193,6 @@ KeyMap:Fn2 base:Common
 
   Key:SPACE Map:Return_or_Enter                           tl:"Return"
 
-  Key:Q Map:`_and_~                        tl:"`"
-  Key:Z Map:`_and_~  <shift>               tl:"~"
 
   Key:Y  Map:[_and_{ <shift>                              tl:"{"
   Key:U  Map:]_and_} <shift>                                tl:"}"

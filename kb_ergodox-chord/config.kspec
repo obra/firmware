@@ -82,7 +82,7 @@ KeyMap:Common
   Key:PGDN Map:Right_Shift                            tl:"Shift"
   Key:SPACE Map:Spacebar                               tl:"Space"
 
-  Key:ENTER Mode:Fn2 type:momentary
+  /* Key:ENTER Mode:Fn2 type:momentary */
   Key:DELETE Mode:Fn2 type:momentary
 
 
@@ -93,6 +93,7 @@ KeyMap:Common
   Key:RALT Map:Right_Alt                                  tl:"Alt"
   Key:PGUP Map:Right_GUI                                  tl:"{win}"
   Key:RCTRL Map:Right_Control                              tl:"Ctrl"
+
 
 KeyMap:US base:Common default
 
@@ -140,6 +141,56 @@ KeyMap:US base:Common default
   Key:PERIOD Map:._and_\>                                   tl:">"    bl:"."
   Key:SLASH Map:/_and_?                                    tl:"?"    bl:"/"
   Key:BSLASH Map:\\_and_\|                                  tl:"|"    bl:"\\"
+  Key:ENTER Mode:Fn2 type:momentary 
+  Key:MINUS  <right_alt|shift>  Mode:Colemak  type:toggle tl:"Colemak"
+
+KeyMap:Colemak base:Common
+  Key:MINUS <right_alt|shift> Mode:US type:toggle tl:"QWERTY"
+  Key:ENTER Mode:Fn2 type:momentary 
+
+  Key:1 Map:1_and_!                                    tl:"!"    bl:"1"
+  Key:2 Map:2_and_@                                    tl:"@"    bl:"2"
+  Key:3 Map:3_and_#                                    tl:"#"    bl:"3"
+  Key:4 Map:4_and_$                                    tl:"$"    bl:"4"
+  Key:5 Map:5_and_%                                    tl:"%"    bl:"5"
+  Key:6 Map:6_and_^                                    tl:"^"    bl:"6"
+  Key:7 Map:7_and_&                                    tl:"&"    bl:"7"
+  Key:8 Map:8_and_*                                    tl:"*"    bl:"8"
+  Key:9 Map:9_and_(                                    tl:"("    bl:"9"
+  Key:0 Map:0_and_)                                    tl:")"    bl:"0"
+
+  Key:Q Map:q_and_Q                                    tl:"Q"
+  Key:W Map:w_and_W                                    tl:"W"
+  Key:E Map:f_and_F                                    tl:"F"
+  Key:R Map:p_and_P                                    tl:"P"
+  Key:T Map:g_and_G                                    tl:"G"
+  Key:Y Map:j_and_J                                    tl:"J"
+  Key:U Map:l_and_L                                    tl:"L"
+  Key:I Map:u_and_U                                    tl:"U"
+  Key:O Map:y_and_Y                                    tl:"Y"
+  Key:P Map:;_and_\:                                   tl:":"    bl:";"
+
+  Key:A Map:a_and_A                                    tl:"A"
+  Key:S Map:r_and_R                                    tl:"R"
+  Key:D Map:s_and_S                                    tl:"S"
+  Key:F Map:t_and_T                                    tl:"T"
+  Key:G Map:d_and_D                                    tl:"D"
+  Key:H Map:h_and_H                                    tl:"H"
+  Key:J Map:n_and_N                                    tl:"N"
+  Key:K Map:e_and_E                                    tl:"E"
+  Key:L Map:i_and_I                                    tl:"I"
+  Key:SEMI Map:o_and_O                                    tl:"O"
+
+  Key:Z Map:z_and_Z                                    tl:"Z"
+  Key:X Map:x_and_X                                    tl:"X"
+  Key:C Map:c_and_C                                    tl:"C"
+  Key:V Map:v_and_V                                    tl:"V"
+  Key:B Map:b_and_B                                    tl:"B"
+  Key:N Map:k_and_K                                    tl:"K"
+  Key:M Map:m_and_M                                    tl:"M"
+  Key:COMMA Map:,_and_\<                                   tl:"<"    bl:","
+  Key:PERIOD Map:._and_\>                                   tl:">"    bl:"."
+  Key:SLASH Map:/_and_?                                    tl:"?"    bl:"/"
 
 KeyMap:Fn2 base:Common
   Key:Q Map:`_and_~                        tl:"`"
@@ -209,6 +260,7 @@ KeyMap:Fn base:Nm
   Key:5C Map:NonUS_\\_and_\| <shift>                  tl:">"
   Key:5D Map:NonUS_\\_and_\| <right_alt>              tl:"¦"
   Key:5E Map:NonUS_\\_and_\| <right_alt|shift>        tl:"_"
+
 
 KeyMap:Nm
 

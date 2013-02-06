@@ -24,19 +24,24 @@
 Keyboard:Doxy
 
 Matrix:
-    /*  0       1       2       3       4       5       6       7       8       9      10       11     12      13      14   */
+    /*  PB6     PB5     PB4     PB3     PB2     PE0     PB7     PD0     PD1     PD2     PD3     PF7  */
+    /*  0       1       2       3       4       5       6       7       8       9       10      11            */
+  Row:  1       2       3       4       5       L_CMD --      --      --      --      --      --                       /*  0  C3 */
+  Row:  Q       W       E       R       T       L_CTRL   --      RALT    PGUP    PGDN    --     R_MINUS           /*  1  C7 */
+  Row:  A       S       D       F       G       L_BLUE  --      --      --      --      --      R_SHIFT       /*  2  C4 */
+  Row:  Z       X       C       V       B       BKSP    --      --      --      --      --      R_ALT            /*  3  C6 */
 
- Row:   ESCAPE   1       2       3       4       5       SKIP   SKIP    6       7      8        9      0       EQUAL   BKSP
- Row:   TAB      Q       W       E       R       T       L_CMD   SKIP    Y       U      I        O      P       DELETE
- Row:   ESCAPE   A       S       D       F       G       L_CTRL  SKIP    H       J      K        L      SEMI    RETURN
- Row:   L_SHIFT  Z       X       C       V       B       L_BLUE  R_BLUE    N       M      COMMA    PERIOD SLASH   R_SHIFT
- Row:   L_CMD      5B      5C       L_CMD   BKSP    ESCAPE  SKIP   SKIP        RETURN SPACE  5H      R_CMD        5K       5L      R_CMD
 
+  Row:  --      --      --      --      --      --       6       7       8       9       0        R_CMD            /*  7  B1 */
+  Row:  --      --      --      --      --      L_MINUS    Y       U       I       O       P       R_CTRL             /*  7  B1 */
+  Row:  --      --      --      --      --      L_SHIFT    H       J       K       L       SEMI    R_BLUE        /*  7  B1 */
+  Row:  --      --      --      --      --      L_ALT    N       M       COMMA   PERIOD  SLASH   SPACE            /*  7  B1 */
 
-  /*       0   1   2   3   4   5   6   7   8   9   10  11  12  13 */
-  ColPins: PD2 PE7 PE6 PF0 PF1 PC2 PE1 PC0 PC3 PC4 PC1 PC5 PC6 PC7
-  /*       0   1   2   3   4   */
-  RowPins: PB7 PB2 PB3 PB4 PB1
+  /*       0   1   2   3   4   5   6   7   8   9   10  11 */
+  ColPins: PB2 PB3 PB4 PB5 PB6 PF7 PB7 PD0 PD1 PD2 PD3 PE0
+
+  /*       0   1   2   3   4   5   6   7   */
+  RowPins: PB1 PB0 PE7 PE6 PD4 PD5 PD6 PD7
 
 
 
@@ -50,15 +55,11 @@ Matrix:
 
 KeyMap:Common
 
-  
 
-
-  Key:ESCAPE Map:ESCAPE                                  tl:"Escape"
   Key:BKSP Map:Backspace                                  tl:"Backspace"
   Key:L_SHIFT Map:Left_Shift                             tl:"Shift"
   Key:R_SHIFT Map:Right_Shift                            tl:"Shift"
   Key:SPACE Map:Spacebar                               tl:"Space"
-  Key:RETURN Map:Return_or_Enter                       tl:"Return"
 
   /* Key:ENTER Mode:Fn2 type:momentary */
   Key:L_BLUE Mode:Fn2 type:momentary
@@ -120,10 +121,13 @@ KeyMap:US base:Common default
   Key:PERIOD Map:._and_\>                                   tl:">"    bl:"."
   Key:SLASH Map:/_and_?                                    tl:"?"    bl:"/"
   Key:BSLASH Map:\\_and_\|                                  tl:"|"    bl:"\\"
+  Key:ENTER Mode:Fn2 type:momentary 
   /* Key:MINUS  <right_alt|shift>  Mode:Colemak  type:toggle tl:"Colemak"*/
-  Key:TAB Map:Tab                                   tl:"Tab"
-
+  Key:L_MINUS Map:Tab                                   tl:"Tab"
+  Key:R_MINUS Map:Return_or_Enter                       tl:"Return"
 KeyMap:Colemak base:Common
+  Key:MINUS <right_alt|shift> Mode:US type:toggle tl:"QWERTY"
+  Key:ENTER Mode:Fn2 type:momentary 
 
   Key:1 Map:1_and_!                                    tl:"!"    bl:"1"
   Key:2 Map:2_and_@                                    tl:"@"    bl:"2"
@@ -170,6 +174,9 @@ KeyMap:Colemak base:Common
   Key:SLASH Map:/_and_?                                    tl:"?"    bl:"/"
 
 KeyMap:Fn2 base:Common
+  Key:Q Map:`_and_~                        tl:"`"
+  Key:Z Map:`_and_~  <shift>               tl:"~"
+
   Key:W Map:UpArrow                                    tl:"{up}"
   Key:A Map:LeftArrow                                  tl:"{left}"
   Key:S Map:DownArrow                                  tl:"{down}"
@@ -188,10 +195,9 @@ KeyMap:Fn2 base:Common
   Key:V Map:Insert                                     tl:"Insert"
   Key:X Map:Delete_Forward                             tl:"Delete"
 
+  Key:BKSP Map:ESCAPE                                  tl:"Escape"
   Key:SPACE Map:Return_or_Enter                           tl:"Return"
 
-  Key:Q Map:`_and_~                        tl:"`"
-  Key:Z Map:`_and_~  <shift>               tl:"~"
 
   Key:Y  Map:[_and_{ <shift>                              tl:"{"
   Key:U  Map:]_and_} <shift>                                tl:"}"
@@ -206,7 +212,7 @@ KeyMap:Fn2 base:Common
   Key:N  Map:\\_and_\| <shift>                                tl:"\|"
   Key:M  Map:=_and_+                                 tl:"="
   Key:COMMA Map:-_and_Underscore                                tl:"-"
-  Key:EQUAL  Map:=_and_+  <shift>                                tl:"+"
+  Key:PERIOD  Map:=_and_+  <shift>                                tl:"+"
   Key:SLASH  Map:\\_and_\|                               tl:"\\"
 
 
